@@ -2,55 +2,41 @@
 #include <vector>
 using namespace std;
 
-int findUnique(vector<int> arr) {
-  int ans = 0;
 
-  for (int i = 0;i<arr.size();i++) {
-    ans = ans ^ arr[i];
-  }
-  return ans;
-}
 
 
 
 
 
 int main() {
-  // UNION OF TWO ARRAYS
+  // Intersection OF TWO ARRAYS
 
-  int arr[] = {1,3,5,7,9};
-  int sizea = 5;
-  int brr[] = {2,4,6,8,10};
-  int sizeb = 5;
+  vector<int> arr{1,2,3,4,6,8};
+  
+  vector<int> brr{8,4,10};
 
-  // resultant array 
+  vector<int> ans;
 
-  vector<int>ans;
+  // Outer loop 
 
-  // Push all elements of arr into vector ans
-
-  for (int i=0;i<sizea;i++) {
-    ans.push_back(arr[i]);
+  for (int i =0;i<arr.size();i++) {
+    int element = arr[i];
+    // For every single element check it is equal to the each number in second array 
+    for (int j= 0;j<brr.size();j++) {
+      if(element == brr[j]) {
+        // if element are double we have to mark it checked and replace the number
+        brr[j] = -1;
+        ans.push_back(element);
+      }
+    }
   }
 
-  // Push all elements of brr into vector ans
-
-  for (int i=0;i<sizeb;i++) {
-    ans.push_back(brr[i]);
+  // Print ans 
+  for(auto value:ans) {
+    cout << value << "" << endl;
   }
-
-  // Print the elements 
-
-  cout << "Printing the result" << endl;
-
-  for (int i = 0;i<ans.size();i++) {
-    cout << ans[i] << "" << endl;
-  }
-
-
   
-  
-  
+
 
   return 0;
 
