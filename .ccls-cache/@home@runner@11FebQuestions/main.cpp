@@ -3,11 +3,6 @@
 using namespace std;
 
 
-
-
-
-
-
 int main() {
   //PAIR SUM PROBLEM
 
@@ -23,16 +18,12 @@ int main() {
     // for each element pair it with forward numbers in the array 
     for (int j=i+1;j<arr.size();j++) {
       if (element + arr[j] == sum)
-      cout << "Pair are" << " " << "(" << element << "," << arr[j] << ")" << endl;
+      cout << "Pair are" << " " << "(" << element << "," << arr[j] << ")" << 
+      endl;
     }
   }
   
-  
-
-
   return 0;
-
-
 
   }
 
