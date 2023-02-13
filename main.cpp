@@ -22,12 +22,11 @@ int main() {
       for (int k=j+1;k<arr.size();k++) {
        int element3 = arr[k];
 
-        for (int p=k+1;p<arr.size();p++) {
-     int element4 = arr[p];
+       
 
         if(element1 + element2 + element3 == sum) {
           cout << "(" << element1 << "," << element2 << "," << element3 <<  ")" << endl;
-          }
+          
         }
    
   }
